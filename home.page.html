@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      App Logística
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <!--<ion-item>
+    <ion-label position="floating">Digite seu peso</ion-label>
+    <ion-input placeholder="Enter text" [(ngModel)]="peso"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digite sua altura</ion-label>
+    <ion-input placeholder="Enter text" [(ngModel)]="altura"></ion-input>
+  </ion-item>
+
+  <ion-button expend="block" (click)="VerificarRadio()">Peso ideal</ion-button>
+  <ion-label>{{res}}</ion-label>
+</ion-content>>!-->
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <!-- <ion-radio-group [(ngModel)]="radioSelecionada">
+      <ion-list-header> Escolha uma opção: </ion-list-header>
+      <ion-item>
+        <ion-label>Pix</ion-label>
+        <ion-radio value="pix"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Debito</ion-label>
+        <ion-radio value="debito"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Credito</ion-label>
+        <ion-radio value="credito"></ion-radio>
+      </ion-item>
+    </ion-radio-group> -->
+    <ion-item>
+      <ion-label position="floating">Digite o peso da mercadoria</ion-label>
+      <ion-input [(ngModel)]="kg" placeholder="KG"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">DIgite a distância</ion-label>
+      <ion-input [(ngModel)]="km" placeholder="KM"></ion-input>
+    </ion-item>
+<br>
+<h1>  Tipo de envio</h1>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="radioSelecionada">
+        <ion-item>
+          <ion-label>Regular - 10 dias úteis</ion-label>
+          <ion-radio slot="end" value="Regular"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Expresso - 5 dias úteis</ion-label>
+          <ion-radio slot="end" value="expresso"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Agendado - 1 dia útil</ion-label>
+          <ion-radio slot="end" value="agendar"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+
+      <p>  Compras acima de 100Kg ou a baixo de 100km recebem 30% de desconto!</p>
+
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col>Peso(KG)</ion-col>
+          <ion-col>Distância(KM)</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>0.45</ion-col>
+          <ion-col>0.30</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </ion-list>
+  <ion-button (click)="VerificarRadio()">Verificar peso ideal</ion-button>
+</ion-content>
